@@ -35,4 +35,4 @@ Implement a lifecycle policy for an S3 bucket to transition objects to Glacier s
    - Click **Save** to apply the lifecycle rule.
 
 
-   <img src="img/task6_img1.png" alt="Example Image" width="600">
+   <img src="img/Task6_img1.png" alt="Example Image" width="600">
