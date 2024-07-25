@@ -1,6 +1,4 @@
-
 # Task 3: AWS Services
-
 Set up an S3 bucket with proper access controls and configure SES to send an email notification when a new object is uploaded to the S3 bucket.
 
 ## Step 1: Create an S3 Bucket

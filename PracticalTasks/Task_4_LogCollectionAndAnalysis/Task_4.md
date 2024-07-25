@@ -18,7 +18,7 @@ The first step is create EC2 instance:
 Get SSH events from EC2. On Amazon Linux 2023 AMI by default we dont have ```/var/log/secure``` for failed login attempts so we need to:
 
 Check SSHD Config for Logging Settings
-First, ensure that your SSH daemon is configured to log events. This is controlled by the SSHD configuration file typically found at /etc/ssh/sshd_config. 
+First, ensure that your SSH daemon is configured to log events. This is controlled by the SSHD configuration file typically found at `/etc/ssh/sshd_config`. 
 
 Look for the following settings:
 LogLevel: This should be set to ```INFO``` or ```VERBOSE``` to capture detailed logs, including failed authentication attempts. 
@@ -44,7 +44,9 @@ journalctl _SYSTEMD_UNIT=sshd.service
 Create a Service to Forward Logs
 We will create a systemd service that continuously forwards logs from journalctl to a specified log file that the CloudWatch Logs agent can then monitor.
 
+```bash
 sudo mkdir -p /var/log/journal_logs
+```
 
 Create a service to forward logs:
 Create a systemd service file that tails the sshd journal and writes it to a log file:
